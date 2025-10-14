@@ -1,12 +1,16 @@
-const heading = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", { id: "heading" }, "This is Heading"),
-    React.createElement("h2", { id: "heading2" }, "This is Heading2"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", { id: "heading" }, "This is Heading"),
-    React.createElement("h2", { id: "heading2" }, "This is Heading2"),
-  ]),
-]);
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+const heading = <h1>I am react element in jsx</h1>
+const Heading = () => {
+  
+  return <>{heading}I am react component in JSX</>;
+}
+
+const component = (
+  <div>
+    <Heading /> <br />I m component
+  </div>
+);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(component);

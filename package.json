@@ -1,0 +1,28 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/deepak-kumar20/ReactBasicToAdvance#readme",
+  "bugs": {
+    "url": "https://github.com/deepak-kumar20/ReactBasicToAdvance/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepak-kumar20/ReactBasicToAdvance.git"
+  },
+  "license": "ISC",
+  "author": "Deepak kumar",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest",
+    "start":"parcel index.html"
+
+  },
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}
