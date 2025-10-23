@@ -1,3 +1,95 @@
-h1{
-    color: blueviolet;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+.header-container > .nav-items > ul {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+  align-items: center;
+}
+.header-container > .nav-items > ul > li {
+  font-size: 24px;
+  font-weight: 500;
+  margin-right: 30px;
+}
+.logo > img {
+  height: 70px;
+}
+.card-container {
+  margin: 10px;
+}
+.card-container:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
+  border: 1px solid grey;
+  padding: 8px;
+}
+.card-image {
+  width: 100%;
+}
+.restaurant-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  width: 250px;
+}
+.filter-btn {
+  padding: 10px;
+  font-size: 18px;
+  margin: 12px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.filter-btn:hover {
+  background-color: #eb0d0d;
+  color: white;
+}
+
+.filter-btn.reset {
+  background-color: #dedede;
+}
+.filter-btn.reset:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+.search-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+  width: 100%;
+}
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+}
+.search-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.search-btn:hover {
+  background-color: #2980b9;
 }

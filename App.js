@@ -1,16 +1,57 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Header from "./src/components/Header";
+import About from "./src/components/About";
+import Contact from "./src/components/Contact";
+import Error from "./src/components/Error";
+import Body from "./src/components/Body";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+/*
+Header
+ -logo
+ -nav items
+Body
+  -search bar
+  -restaurant container
+    -restaurant card
+      -image
+      -name
+      -rating
+      -cuisine
+Footer
+ -copyright
+ -links
+*/
 
-const heading = <h1>I am react element in jsx</h1>
-const Heading = () => {
-  
-  return <>{heading}I am react component in JSX</>;
-}
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+      <Outlet />
+    </div>
+  );
+};
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
+    errorElement: <Error />,
+  },
+]);
 
-const component = (
-  <div>
-    <Heading /> <br />I m component
-  </div>
-);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(component);
+root.render(<RouterProvider router={appRouter} />);
