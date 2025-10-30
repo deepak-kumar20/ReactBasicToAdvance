@@ -2,8 +2,9 @@ import Card from "./Card";
 import Shimmer from "./Shimmer";
 import { useEffect, useState } from "react";
 import { API_URL } from "../../utils/constant";
-
+import useOnlineStatus from "../../utils/useOnlineStatus";
 const Body = () => {
+  const status = useOnlineStatus();
   const [res, setRes] = useState([]);
    const [filRes, setFilRes] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -28,8 +29,13 @@ const Body = () => {
   if (res.length === 0) {
     return <Shimmer />;
   }
+  if (status === false) {
+    return <div>you are offline </div>
+    
+  }
 
   return (
+
     <div className="body-container">
       <div className="search-container">
         <input

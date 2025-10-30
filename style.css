@@ -163,3 +163,14 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.user{
+  padding: 12px;
+  margin: 7px;
+  background-color: lightgrey;
+  font-weight: bold;
+  width: 250px;
+}
+.img{
+  width: 100%;
+  height: auto;
+}

@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../../utils/useOnlineStatus";
 
 const Header = () => {
   const [btn, setBtn] = useState("Login");
+  const status = useOnlineStatus();
   //---Always call hooks in the Component and at the top. bcz js is single threaded synchronous language.
   //dont create useState in conditions and loop. and also in funtion.you can but it is bad practice.
   //use Effect Hook-- only callback funtion is mandatory.It can work without the dependecy array.
@@ -26,6 +28,10 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul>
+          <li>Status:
+            {status? "🟢":"offline"}
+
+          </li>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact Us</Link></li>
